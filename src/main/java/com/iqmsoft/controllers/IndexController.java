@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 	
-	@Value("${controller.titulo}")
-	private String titulo;
+	@Value("${controller.title}")
+	private String title;
 	
 	@GetMapping(value = "/")
 	public String index(Model model) {
-		model.addAttribute("saludo", titulo);
+		model.addAttribute("greeting", title);
 		return "index";
 	}
 }
